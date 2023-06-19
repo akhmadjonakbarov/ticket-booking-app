@@ -102,7 +102,38 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           const Gap(15),
-          const TicketView(),
+          const SingleChildScrollView(
+            padding: EdgeInsets.only(left: 20, right: 20),
+            scrollDirection: Axis.horizontal,
+            child: TicketView(),
+          ),
+          const Gap(15),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Hotels",
+                  style: Styles.headLineStyle21,
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "View all",
+                    style:
+                        Styles.textStyle.copyWith(color: Styles.primaryColor),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Gap(15),
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.only(left: 20),
+            child: HotelView(),
+          )
         ],
       ),
     );
